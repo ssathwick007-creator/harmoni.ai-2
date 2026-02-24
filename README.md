@@ -34,3 +34,14 @@ PYTHONPATH=src python -m unittest discover -s tests -v
 2. Add structured logging and configuration via environment variables.
 3. Add CI (format/lint/test) so every commit is validated automatically.
 4. Add Docker support once runtime dependencies are finalized.
+
+
+## UI preview
+
+A clean standalone UI is available at `ui/index.html` and does not modify backend behavior.
+
+Open it directly in a browser:
+
+```bash
+xdg-open ui/index.html
+```
