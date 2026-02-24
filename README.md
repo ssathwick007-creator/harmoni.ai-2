@@ -1,38 +1,36 @@
-# Making This Project Work Properly
+# harmoni.ai-2
 
-Right now this repository is essentially empty (only `.gitkeep` exists), so there is nothing runnable yet.
+A minimal runnable starter service so this repository works out-of-the-box.
 
-## What to do next
+## What is included
 
-1. **Define the project goal in one sentence**
-   - Example: "Build a web app for ..."
+- A small HTTP service with JSON responses.
+- Endpoints:
+  - `GET /` : service info
+  - `GET /health` : health check
+- Unit tests for the core endpoints.
 
-2. **Pick the tech stack**
-   - Frontend: React / Next.js / Vue
-   - Backend: Node / Python / Go
-   - Database: Postgres / MySQL / SQLite
+## Quick start
 
-3. **Initialize the project structure**
-   - Create source folders (`src/`, `tests/`, etc.)
-   - Add package/dependency files (`package.json`, `pyproject.toml`, etc.)
+### 1) Run the service
 
-4. **Add a run command**
-   - Make sure `npm run dev`, `python -m ...`, or equivalent starts the app.
+```bash
+PYTHONPATH=src python -m harmoni_ai --host 127.0.0.1 --port 8000
+```
 
-5. **Add basic quality checks**
-   - Linting
-   - Formatting
-   - At least one automated test
+Then open:
+- <http://127.0.0.1:8000/>
+- <http://127.0.0.1:8000/health>
 
-6. **Add environment documentation**
-   - Create `.env.example`
-   - Document setup and run instructions in this README
+### 2) Run tests
 
-## Quick "done" checklist
+```bash
+PYTHONPATH=src python -m unittest discover -s tests -v
+```
 
-- [ ] Project can be installed from a clean machine.
-- [ ] One command starts it locally.
-- [ ] Tests run successfully.
-- [ ] README includes setup + troubleshooting.
+## Next recommended steps
 
-If you tell me your preferred stack (for example: "Next.js + Node + Postgres"), I can generate a complete starter structure and scripts for you.
+1. Add request/response schemas for real product APIs.
+2. Add structured logging and configuration via environment variables.
+3. Add CI (format/lint/test) so every commit is validated automatically.
+4. Add Docker support once runtime dependencies are finalized.
