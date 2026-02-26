@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>harmoni.ai-2 Dashboard</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <section class="card hero">
+        <p class="badge">SYSTEM STATUS</p>
+        <h1>harmoni.ai-2</h1>
+        <p class="subtitle">Minimal service dashboard UI</p>
+        <div class="status-row">
+          <span class="dot"></span>
+          <span>Service state: Running</span>
+        </div>
+      </section>
+
+      <section class="card grid">
+        <article>
+          <h2>Root Endpoint</h2>
+          <p>Returns service metadata and available paths.</p>
+          <code>GET /</code>
+        </article>
+
+        <article>
+          <h2>Health Endpoint</h2>
+          <p>Simple health check response for uptime monitoring.</p>
+          <code>GET /health</code>
+        </article>
+
+        <article>
+          <h2>Design Goals</h2>
+          <ul>
+            <li>Clear hierarchy</li>
+            <li>Readable contrast</li>
+            <li>Responsive layout</li>
+          </ul>
+        </article>
+      </section>
+
+      <section class="card footer-card">
+        <p>Tip: Keep backend logic untouched and evolve this UI independently.</p>
+      </section>
+    </main>
+  </body>
+</html>
